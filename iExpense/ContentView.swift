@@ -53,8 +53,9 @@ struct ContentView: View {
             }
             .listStyle(PlainListStyle())
             .navigationTitle("iExpense")
-            .navigationBarItems(trailing:
-                Button(action: {
+            .navigationBarItems(
+                leading: EditButton(),
+                trailing: Button(action: {
                     self.showingAddExpense = true
                 }) {
                     Image(systemName: "plus")
